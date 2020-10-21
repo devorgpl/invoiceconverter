@@ -1,4 +1,4 @@
-from lib.InvoiceDocument import InvoiceDocument
+from invoiceconverterlib.InvoiceDocument import InvoiceDocument
 
 
 class ParserInterface:

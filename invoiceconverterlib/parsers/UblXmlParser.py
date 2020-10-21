@@ -1,8 +1,8 @@
 from xml.dom.minidom import parse, Element
 
-from lib.InvoiceDocument import InvoiceDocument, InvoiceHeader, InvoiceParty, InvoiceLine
-from lib.ParserInterface import ParserInterface
-from lib.utils.XmlUtil import xmlExtractText, xmlExtractDate
+from invoiceconverterlib.InvoiceDocument import InvoiceDocument, InvoiceHeader, InvoiceParty, InvoiceLine
+from invoiceconverterlib.ParserInterface import ParserInterface
+from invoiceconverterlib.utils.XmlUtil import xmlExtractText, xmlExtractDate
 
 """TODO: unfinished parser"""
 

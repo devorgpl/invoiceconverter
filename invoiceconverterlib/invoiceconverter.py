@@ -1,11 +1,11 @@
 import logging
 
-from lib import ParserInterface, InvoiceDocument, GeneratorInterface
-from lib.generators.InsertEppGenerator import InsertEppGenerator
-from lib.parsers.ComarchXmlParser import ComarchXmlParser
-from lib.parsers.OptimaXmlParser import OptimaXmlParser
-from lib.parsers.UblXmlParser import UblXmlParser
-from lib.parsers.XlsxInvoiceParser import XlsxInvoiceParser
+from invoiceconverterlib import ParserInterface, InvoiceDocument, GeneratorInterface
+from invoiceconverterlib.generators.InsertEppGenerator import InsertEppGenerator
+from invoiceconverterlib.parsers.ComarchXmlParser import ComarchXmlParser
+from invoiceconverterlib.parsers.OptimaXmlParser import OptimaXmlParser
+from invoiceconverterlib.parsers.UblXmlParser import UblXmlParser
+from invoiceconverterlib.parsers.XlsxInvoiceParser import XlsxInvoiceParser
 
 
 def ffind_format_parser(filename):

@@ -1,10 +1,10 @@
 import re
 from xml.dom.minidom import Element, Document, parse
 
-from lib.InvoiceDocument import InvoiceDocument, InvoiceHeader, InvoiceParty, InvoiceSummary, InvoiceTaxSummary, \
+from invoiceconverterlib.InvoiceDocument import InvoiceDocument, InvoiceHeader, InvoiceParty, InvoiceSummary, InvoiceTaxSummary, \
     InvoiceLine
-from lib.ParserInterface import ParserInterface
-from lib.utils.XmlUtil import xmlExtractText, xmlExtractDate, xmlExtractTextOrEmpty
+from invoiceconverterlib.ParserInterface import ParserInterface
+from invoiceconverterlib.utils.XmlUtil import xmlExtractText, xmlExtractDate, xmlExtractTextOrEmpty
 
 
 class OptimaXmlParser(ParserInterface):

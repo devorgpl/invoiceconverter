@@ -1,5 +1,5 @@
-from lib.InvoiceDocument import InvoiceDocument
-from lib.GeneratorInterface import GeneratorInterface
+from invoiceconverterlib.InvoiceDocument import InvoiceDocument
+from invoiceconverterlib.GeneratorInterface import GeneratorInterface
 
 
 class InsertEppGenerator(GeneratorInterface):

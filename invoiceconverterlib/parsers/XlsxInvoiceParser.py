@@ -3,9 +3,9 @@ import re
 from openpyxl import load_workbook
 from openpyxl.worksheet.worksheet import Worksheet
 
-from lib.InvoiceDocument import InvoiceDocument, InvoiceHeader, InvoiceParty, InvoiceSummary, InvoiceTaxSummary, \
+from invoiceconverterlib.InvoiceDocument import InvoiceDocument, InvoiceHeader, InvoiceParty, InvoiceSummary, InvoiceTaxSummary, \
     InvoiceLine
-from lib.ParserInterface import ParserInterface
+from invoiceconverterlib.ParserInterface import ParserInterface
 
 
 class XlsxInvoiceParser(ParserInterface):
