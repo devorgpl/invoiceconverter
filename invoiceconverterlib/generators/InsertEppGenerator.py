@@ -1,7 +1,8 @@
 import re
+from encodings.cp1250 import decoding_table
 
-from invoiceconverterlib.InvoiceDocument import InvoiceDocument
 from invoiceconverterlib.GeneratorInterface import GeneratorInterface
+from invoiceconverterlib.InvoiceDocument import InvoiceDocument
 
 
 class InsertEppGenerator(GeneratorInterface):
@@ -211,14 +212,23 @@ class InsertEppGenerator(GeneratorInterface):
         text_file = open(filename, "w", encoding='cp1250', newline='\r\n')
 
         txt = self.generateTxt(invoice_obj)
+        fixed_txt = ''
+        i = 0
+        for chr in txt:
+            i += 1
+            # print(chr)
+            if decoding_table.find(chr) == -1:
+                print('not found char at(', i, '), removing: "' + chr + '"')
+            else:
+                fixed_txt += chr
         # print(txt)
         try:
-            text_file.write(txt)
+            text_file.write(fixed_txt)
         except UnicodeEncodeError as err:
             text_file.close()
             print("Error:")
             print(str(err))
             m = re.search(r'(\d+)-(\d+)', str(err))
-            print(txt[int(m.group(1))-50:int(m.group(2))+50])
+            print(txt[int(m.group(1)) - 50:int(m.group(2)) + 50])
             raise err
         text_file.close()
